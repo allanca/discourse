@@ -9,7 +9,8 @@ class AboutController < ApplicationController
     return redirect_to path("/login") if SiteSetting.login_required? && current_user.nil?
 
     @about = About.new(current_user)
-    @title = "#{I18n.t("js.about.simple_title")} - #{SiteSetting.title}"
+    @title = "#{I18n.t("js.about.simple_title")} + #{SiteSetting.title}"
+    @subtitle = "I'm a little Teapot that likes to alter and create tables"
     respond_to do |format|
       format.html { render :index }
       format.json { render_json_dump(AboutSerializer.new(@about, scope: guardian)) }
