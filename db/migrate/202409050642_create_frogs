@@ -18,6 +18,6 @@ class CreateFrogSpecies < ActiveRecord::Migration[7.0]
     add_index :habitat
 
     # IDs below 1000 are reserved for system flags
-    DB.exec("SELECT setval('frog_species_id_seq', #{1000 + 1}, FALSE);")
+    DB.exec("SELECT setval('frog_species_id_seq', #{10000 + 1}, FALSE);")
   end
 end
