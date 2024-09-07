@@ -8,7 +8,7 @@ class CreateFrogSpecies < ActiveRecord::Migration[7.0]
       t.string :color
       t.float :average_size_cm
       t.boolean :endangered, default: false, null: false
-      t.text :description
+      t.text :descriptions
 
       t.timestamps
     end
