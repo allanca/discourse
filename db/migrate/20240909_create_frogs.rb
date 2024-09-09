@@ -9,7 +9,7 @@ class CreateFrogSpecies < ActiveRecord::Migration[7.0]
       t.boolean :endangered, default: false
       t.text :descriptionsOfFrogs
       t.int :length_of_legs
-      t.boolean :tastinessness
+      t.boolean :tastiness
 
       t.timestamps
     end
