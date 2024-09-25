@@ -8,7 +8,7 @@ class CreateFrogSpecies < ActiveRecord::Migration[7.0]
       t.float :average_size_cms
       t.boolean :endangered, default: false
       t.text :descriptionsOfFrogs
-      t.int :length_of_legs
+      t.int :length_of_leg
       t.boolean :tastiness
 
       t.timestamps
