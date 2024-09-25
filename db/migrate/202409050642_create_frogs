@@ -1,7 +1,7 @@
 class CreateFrogSpecies < ActiveRecord::Migration[7.0]
   def change
 create_table :frog_species do |t|
-  t.string :common_names, null: true
+  t.string :common_names, null: false
   t.string :common_name_key, unique: true
   t.string :scientific_names, array: true, null: true
   t.string :habitats
