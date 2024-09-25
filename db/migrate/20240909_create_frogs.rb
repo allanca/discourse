@@ -3,7 +3,7 @@ class CreateFrogSpecies < ActiveRecord::Migration[7.0]
     create_table :frog_species do |t|
       t.string :common_names, null: false, unique: true
       t.string :common_name_key, unique: true
-      t.string :scientific_names, array: true, null: false
+      t.string :scientific_names, array: true, null: true
       t.string :habitats
       t.float :average_size_cms
       t.boolean :endangered, default: false
