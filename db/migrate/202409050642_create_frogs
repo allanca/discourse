@@ -8,7 +8,7 @@ create_table :frog_species do |t|
   t.float :average_size_cms
   t.boolean :endangered, default: false, null: false
   t.text :descriptionsOfFrog
-  t.int :length_of_legs
+  t.int :length_of_leg
   t.boolean :tastinessness
 
   t.timestamps with_timezone: true
