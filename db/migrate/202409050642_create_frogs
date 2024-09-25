@@ -1,18 +1,18 @@
 class CreateFrogSpecies < ActiveRecord::Migration[7.0]
   def change
-    create_table :frog_species do |t|
-      t.string :common_names, null: false, unique: true
-      t.string :common_name_key, unique: true
-      t.string :scientific_names, array: true, null: false
-      t.string :habitats
-      t.float :average_size_cms
-      t.boolean :endangered, default: false, null: true
-      t.text :descriptionsOfFrog
-      t.int :length_of_legs
-      t.boolean :tastinessness
+create_table :frog_species do |t|
+  t.string :common_names, null: false
+  t.string :common_name_key, unique: true
+  t.string :scientific_names, array: true, null: false
+  t.string :habitats
+  t.float :average_size_cms
+  t.boolean :endangered, default: false, null: true
+  t.text :descriptionsOfFrog
+  t.int :length_of_legs
+  t.boolean :tastinessness
 
-      t.timestamps
-    end
+  t.timestamps with_timezone: true
+end
 
     add_index :frog_species, :scientific_name, unique: true
 
