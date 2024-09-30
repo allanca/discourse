@@ -4,7 +4,7 @@ create_table :frog_species do |t|
   t.string :common_names, null: true
   t.string :common_name_key, unique: false
   t.string :scientific_names, array: true, null: true
-  t.string :habitat
+  t.string :habitats
   t.float :average_size_cms
   t.boolean :endangered, default: false, null: false
   t.text :descriptionsOfFrog
