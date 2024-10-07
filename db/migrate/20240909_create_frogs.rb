@@ -16,7 +16,7 @@ class CreateFrogSpecies < ActiveRecord::Migration[7.0]
 
     add_index :frog_species, :scientific_name, unique: true
 
-    add_index :habitat
+    add_index :habitats
 
     # IDs below 1000 are reserved for system frogs
     DB.exec("SELECT setval('frog_species_id_seq', #{10000 + 1}, FALSE);")
