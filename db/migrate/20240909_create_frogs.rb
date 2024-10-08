@@ -14,7 +14,7 @@ class CreateFrogSpecies < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
-    add_index :frog_species, :scientific_name, unique: true
+    add_index :frog_species, :scientific_name, unique: false
 
     add_index :habitats
 
